@@ -1,0 +1,7 @@
+---
+- name: Ping all hosts 
+  hosts: onecservers 
+
+  tasks:
+  - name: ping
+    win_ping:
