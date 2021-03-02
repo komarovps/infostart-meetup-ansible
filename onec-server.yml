@@ -1,0 +1,16 @@
+---
+- name: deploy onec server
+  hosts: onecservers
+  vars_files: 
+    - secrets.yml
+  pre_tasks:
+    - name: create ansible temp directory
+      win_file:
+        path: "{{ ansible_win_temp_dir }}"
+        state: directory
+        ignore_errors: true
+  roles:
+    - role: onec-server
+      v8version: "8.3.18.1128"
+
+

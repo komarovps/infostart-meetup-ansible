@@ -1,0 +1,1 @@
+ansible_win_temp_dir: 'C:\temp\ansible'
